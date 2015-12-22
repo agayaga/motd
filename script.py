@@ -1,4 +1,4 @@
-#! /usr/bin/python2
+#! /usr/bin/python
 # -*- coding: utf8 -*-
 
 # Import stuff we need
@@ -6,7 +6,7 @@ import os
 import random
 
 # Open the file
-file = open('/var/scripts/motd/quotes.txt','r')
+file = open('quotes.txt', 'r')
 
 # Read the entire file and append each line to the array
 quotes = []
@@ -22,4 +22,4 @@ open('/etc/motd', 'w').close()
 
 # Change the motd-file
 with open('/etc/motd', 'a') as file:
-    file.write("\n" + quotes[num] + "\n")
+    file.write('\n' + quotes[num] + '\n\n')
