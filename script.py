@@ -6,7 +6,9 @@ import os
 import random
 
 # Open the file
-file = open('quotes.txt', 'r')
+__location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+file = open(os.path.join(__location__, 'quotes.txt'), 'r')
 
 # Read the entire file and append each line to the array
 quotes = []
