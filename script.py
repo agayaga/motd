@@ -19,9 +19,6 @@ file.close()
 # Generate random quote based on the amount of quotes we found
 num = random.randint(0, len(quotes)-1)
 
-# Clear content
-open('/etc/motd', 'w').close()
-
 # Change the motd-file
-with open('/etc/motd', 'a') as file:
+with open('/etc/motd', 'w+') as file:
     file.write('\n' + quotes[num] + '\n\n')
